@@ -18,6 +18,7 @@ class Input extends Component {
     
   }
   handleSubmit = () => {
+    if(!this.state.value) return
     this.props.dispatch(addtodo(this.state.value));
     this.setState({
       value: "",
@@ -28,10 +29,9 @@ class Input extends Component {
     return (
       <Fragment>
       <div className="App">      
-        <input type="text" placeholder="Enter value" onChange={(e) => this.handleChange(e)} value={this.state.value}></input>
-        <button onClick={this.handleSubmit}>Add</button>     
-      </div>
-      
+        <input type="text"  className="input_field"placeholder="Enter value" onChange={(e) => this.handleChange(e)} value={this.state.value}></input>
+        <button className="add_btn"onClick={this.handleSubmit}>Add</button>     
+      </div>   
       </Fragment>
     )
   }

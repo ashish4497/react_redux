@@ -29,8 +29,16 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-  line-height: 1;
-  margin:0 auto;
+	margin:0 auto;
+	margin-top: 20px;
+	background: #343434;
+	// background-image: url("https://www.robinwieruch.de/img/page/newsletter.jpg");
+	// background-attachment: fixed;
+	// background-size: cover;
+	// background-repeat: no-repeat;
+	// background-position: center;
+	
+
 }
 ol, ul {
 	list-style: none;
@@ -47,6 +55,83 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-.App{
-  text-align: center;
+// .App{
+//   text-align: center;
+// }
+h2 {
+	font-size: 22px;
+	text-transform:capitalize;
 }
+
+////inoutfield////
+.App {
+	margin: 0 auto;
+	width: 500px;
+	text-align: center;
+	
+	.input_field {
+		box-sizing: border-box;
+		display: block;
+		margin:0 auto;
+		text-align: center;
+		background:white;
+		border:2px solid whitesmoke;
+		border-radius: 3px;
+		color: #343434;
+		width: 350px;
+		text-align: left;
+		padding:10px;
+		outline: none;
+		font-size: 15px;
+	}	
+	.add_btn {
+		color: #fff;
+    background: transparent;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 16px;
+		border: 1px solid whitesmoke;
+		width:150px;
+		outline: none;
+	}
+	.add_btn:hover{
+		background: #fff;
+		color: #343434;
+		cursor: pointer;
+	}	
+
+}
+button {
+	color: #fff;
+	background:transparent;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 6px 12px;
+	font-size: 16px;
+	border: 1px solid whitesmoke;
+	color:gainsboro;
+	margin-top: 15px;
+}
+button:hover{
+	background: #fff;
+	color: #343434;
+	cursor: pointer;
+}	
+.undo-button{
+	padding: 2px 61px;
+	display: inline-block;
+}
+.redo-button{
+	text-align: center;
+	padding: 0 61px;
+	display: inline-block;
+}
+.component3{
+	text-transform:uppercase;
+	color:#fff;
+}
+.component4{
+	text-transform:uppercase;
+	color:#fff;
+}
+

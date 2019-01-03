@@ -18,11 +18,13 @@ class App extends Component {
       <div className= "component2">
        <Undo />
       </div>
+      <div className="display_items">
       <div className= "component3">
         <Unpacked />
       </div>
       <div className = "component4">
         <Packed/>
+      </div>
       </div>
     </div>
     );

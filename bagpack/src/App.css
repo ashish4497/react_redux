@@ -1,0 +1,140 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  margin: 0 auto;
+  margin-top: 20px;
+  background: #343434;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h2 {
+  font-size: 22px;
+  text-transform: capitalize;
+}
+
+.App {
+  margin: 0 auto;
+  width: 500px;
+  text-align: center;
+}
+
+.App .input_field {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background: white;
+  border: 2px solid whitesmoke;
+  border-radius: 3px;
+  color: #343434;
+  width: 350px;
+  text-align: left;
+  padding: 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+.App .add_btn {
+  color: #fff;
+  background: transparent;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px;
+  border: 1px solid whitesmoke;
+  width: 150px;
+  outline: none;
+}
+
+.App .add_btn:hover {
+  background: #fff;
+  color: #343434;
+  cursor: pointer;
+}
+
+button {
+  color: #fff;
+  background: transparent;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  font-size: 16px;
+  border: 1px solid whitesmoke;
+  color: gainsboro;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: #fff;
+  color: #343434;
+  cursor: pointer;
+}
+
+.undo-button {
+  padding: 2px 61px;
+  display: inline-block;
+}
+
+.redo-button {
+  text-align: center;
+  padding: 0 61px;
+  display: inline-block;
+}
+
+.component3 {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.component4 {
+  text-transform: uppercase;
+  color: #fff;
+}
+/*# sourceMappingURL=App.css.map */

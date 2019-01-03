@@ -1,10 +1,12 @@
 const initialstate = {
   items: [],
+  redo :[]
 }
 export default function bagpack(state = initialstate, action) {
   switch (action.type) {
     case 'ADDLIST':
       return {
+        ...state,
         items: [...state.items, {value:action.value, done:false}]
       }
     case 'DELETLIST' :
@@ -16,6 +18,23 @@ export default function bagpack(state = initialstate, action) {
       state.items[action.id].done = !state.items[action.id].done;
       return {
         items: [...state.items]
+      }
+    }
+    case  "UNDO" : {
+    var undoitem = state.items.splice(state.items.length-1,1)
+      return {
+        ...state,
+        items : [...state.items],
+        redo : [...state.redo,...undoitem] ,
+
+      } 
+    }
+    case  "REDO" : { 
+      var redoitem = state.redo.splice(state.redo.length-1,1)
+      return {
+        ...state,
+        items : [...state.items, ...redoitem],
+        redo :[...state.redo]
       }
     }
     default:

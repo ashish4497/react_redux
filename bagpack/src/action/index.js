@@ -20,3 +20,17 @@ export const checked = (id) => {
     id
   }
 }
+
+export const undo = () => {
+  return {
+    type : "UNDO",
+  }
+}
+
+export const redo = (id) => {
+  console.log(id,"redo")
+  return {
+    type : "REDO",
+    id
+  }
+}

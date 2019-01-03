@@ -28,11 +28,11 @@ class Unpacked extends Component {
 
                return (
                  <div key = {index} className="item_display">
-                  <p>
-                  <input type ="checkbox" id={index} onChange ={() =>this.props.dispatch(checked(index))}></input>
-                  {value.value} 
-                  <button id={index} onClick={this.handdledelete}>X</button>
-                  </p>         
+                  <div className= "render_items">
+                    <input type ="checkbox" id={index} onChange ={() =>this.props.dispatch(checked(index))}></input>
+                    <h2>{value.value} </h2>
+                    <button id={index} onClick={this.handdledelete}>X</button>
+                  </div>         
                 </div>
               )
             }
