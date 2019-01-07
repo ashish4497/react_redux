@@ -5,7 +5,7 @@ import SignedInLinks from './SignedInLinks';
 
 const Navbar = () => {
   return (
-    <nav className = "nav-wrapper gray dark-3">
+    <nav className = "nav-wrapper #c5cae9 indigo lighten-4">
       <div className ="container">
         <Link to ="/" className="brand-logo">marioplan</Link>
         <SignedInLinks />

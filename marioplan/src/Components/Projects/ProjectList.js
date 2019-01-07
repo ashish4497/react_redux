@@ -1,7 +1,6 @@
 import React from 'react';
 import ProjectSummary from './ProjectSummary';
 
-
 const ProjecrList = ({projects}) => {
   return (
     <div className = "project-list section">
