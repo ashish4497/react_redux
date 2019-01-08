@@ -1,20 +1,49 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {firestoreConnect} from 'react-redux-firebase';
+import {compose} from 'redux';
+// import {} from '@firebase/auth-types';
 
 const ProjectDetail = (props) => {
-  const id = props.match.params.id; 
-  return (
-    <div className ="container section project-details">
-      <div className= "card z-depth-0">
-        <div className="card-content">
-          <span className="card-title"> Project Title -{id}</span>
-          <p>Loream is the best to copy and past the content</p>
-        </div>
-        <div className="card-action gret lighten-3 grey-text">
-          <div>posted by the net ninja</div>
-          <div>1 jan, 3pm</div>
+  // const id = props.match.params.id; 
+  // console.log(props)
+  const {project} = props;
+  if (project) {
+    return ( 
+      <div className ="container section project-details">
+        <div className= "card z-depth-0">
+          <div className="card-content">
+            <span className="card-title"> {project.title}</span>
+            <p>{project.content}</p>
+          </div>
+          <div className="card-action gret lighten-3 grey-text">
+            <div>posted by {project.authorFirstName} {project.authorLirstName}</div>
+            <div>1 jan, 3pm</div>
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  } else {
+    return (
+      <div className= "container center">
+        <p>Loading..</p>
+      </div>
+    )
+  }  
 }
-export default ProjectDetail;
+
+const mapStateToProps = (state,ownProps) => {
+  // console.log(state)
+  const id = ownProps.match.params.id;
+  const projects = state.firestore.data.projects;
+  const project = projects ? projects[id] : null
+  return {
+    project : project
+  }
+}
+export default compose(
+  connect(mapStateToProps),
+  firestoreConnect([{
+    collection : 'projects'
+  }])
+)(ProjectDetail)
